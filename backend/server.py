@@ -70,15 +70,6 @@ INITIAL_PRODUCTS = [
         "description": "Borsa compatta da tutti i giorni con dettagli color petrolio, chiusura dorata e tracolla regolabile.",
     },
     {
-        "id": "purse-sole",
-        "category": "purses",
-        "name": "Borsa Sole mini",
-        "price": 46,
-        "image": "assets/purse-sole.svg",
-        "position": "center",
-        "description": "Piccola borsa fatta a mano per la sera, rifinita con una calda texture intrecciata.",
-    },
-    {
         "id": "necklace-pearl",
         "category": "necklaces",
         "name": "Collana lunga di perle",
