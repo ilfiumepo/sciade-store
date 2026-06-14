@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sciade-store
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python3 backend/server.py"
+    envVars:
+      - key: SCIADE_ENV
+        value: production
+      - key: SCIADE_COOKIE_SECURE
+        value: "1"
+      - key: SCIADE_ADMIN_EMAIL
+        sync: false
+      - key: SCIADE_ADMIN_PASSWORD
+        sync: false
+

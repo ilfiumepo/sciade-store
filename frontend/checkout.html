@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout | Sciadè</title>
+    <meta
+      name="description"
+      content="Checkout dimostrativo per gli accessori artigianali Sciadè."
+    />
+    <link rel="stylesheet" href="styles.css?v=24" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#shop" aria-label="Homepage Sciadè">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/sciade-logo.jpg" alt="" />
+        </span>
+        <span>
+          <strong>Sciadè</strong>
+          <small>accessori fatti a mano</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <a href="index.html#brand">Brand</a>
+        <a href="index.html#shop">Shop</a>
+        <a href="index.html#contact">Contatti</a>
+      </nav>
+      <div class="header-actions">
+        <a class="account-link" href="login.html" data-account-link>Account</a>
+        <button class="cart-icon-button" type="button" data-cart-toggle aria-label="Apri carrello">
+          <span class="cart-bag-icon" aria-hidden="true"></span>
+          <strong class="cart-count-badge is-hidden" data-cart-count>0</strong>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="checkout-page" aria-labelledby="checkout-title">
+        <div class="checkout-summary">
+          <a class="back-link" href="index.html#shop">← Continua lo shopping</a>
+          <p class="eyebrow">Checkout</p>
+          <h1 id="checkout-title">Riepilogo ordine</h1>
+          <p>
+            Controlla i pezzi nel carrello, poi aggiungi i dettagli di consegna
+            per salvare la richiesta d'ordine nel database Sciadè.
+          </p>
+          <p class="checkout-contact">
+            Preferisci ordinare direttamente?
+            <a href="mailto:lv.desideri@gmail.com">lv.desideri@gmail.com</a>
+            oppure <a href="tel:+393277578711">+39 327 757 8711</a>.
+          </p>
+          <div class="mini-cart" data-mini-cart>
+            <p>Il carrello è vuoto.</p>
+          </div>
+        </div>
+
+        <div class="checkout-auth-card" data-checkout-auth>
+          <div>
+            <p class="eyebrow">Account</p>
+            <h2>Come vuoi continuare?</h2>
+            <p>Accedi per usare il tuo profilo salvato, oppure continua come ospite solo per questo ordine.</p>
+          </div>
+          <div class="checkout-auth-actions">
+            <a class="primary-link" href="login.html?next=checkout.html">Accedi o registrati</a>
+            <button class="secondary-link" type="button" data-guest-checkout>Continua come ospite</button>
+          </div>
+        </div>
+
+        <form class="checkout-form is-hidden" data-checkout-form>
+          <div class="checkout-identity field-wide" data-checkout-identity>
+            <label>
+              Nome
+              <input name="firstName" autocomplete="given-name" required />
+            </label>
+            <label>
+              Cognome
+              <input name="lastName" autocomplete="family-name" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+          </div>
+          <p class="checkout-note field-wide is-hidden" data-account-checkout-note></p>
+          <label>
+            Telefono
+            <input name="phone" type="tel" autocomplete="tel" />
+          </label>
+          <label class="field-wide">
+            Indirizzo di spedizione
+            <textarea name="address" rows="4" autocomplete="street-address" required></textarea>
+          </label>
+          <label>
+            Preferenza di consegna
+            <select name="delivery" required>
+              <option value="">Scegli un'opzione</option>
+              <option>Spedizione</option>
+              <option>Ritiro di persona</option>
+              <option>Da decidere via messaggio</option>
+            </select>
+          </label>
+          <label>
+            Metodo di pagamento preferito
+            <select name="payment" required>
+              <option value="">Scegli un'opzione</option>
+              <option>PayPal</option>
+              <option>Bonifico bancario</option>
+              <option>Contanti al ritiro</option>
+              <option>Pagamento con carta in seguito</option>
+            </select>
+          </label>
+          <label>
+            Tempistiche
+            <select name="timing" required>
+              <option value="">Scegli un'opzione</option>
+              <option>Appena disponibile</option>
+              <option>È un regalo</option>
+              <option>Nessuna fretta</option>
+            </select>
+          </label>
+          <label class="field-wide">
+            Note
+            <textarea name="notes" rows="3" placeholder="Pacchetto regalo, preferenze colore, note di consegna..."></textarea>
+          </label>
+          <p class="checkout-note">
+            Dopo aver inviato l'ordine, sarà possibile vedere i dettagli salvati
+            nella pagina ordini dell'area admin.
+          </p>
+          <button class="submit-order" type="submit">Invia richiesta d'ordine</button>
+          <p class="form-message" data-form-message role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <aside class="cart-panel" data-cart-panel aria-label="Carrello" aria-hidden="true">
+      <div class="cart-panel-header">
+        <h2>Il tuo carrello</h2>
+        <button type="button" data-cart-close aria-label="Chiudi carrello">×</button>
+      </div>
+      <div class="cart-items" data-cart-items></div>
+      <div class="cart-total">
+        <span>Totale</span>
+        <strong data-cart-total>€0</strong>
+      </div>
+      <a class="checkout-link" href="checkout.html" data-cart-close-link>Vai al checkout</a>
+    </aside>
+    <div class="scrim" data-scrim></div>
+
+    <script src="app.js?v=16"></script>
+  </body>
+</html>

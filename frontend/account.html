@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Account | Sciadè</title>
+    <meta name="description" content="Gestisci il tuo account Sciadè." />
+    <link rel="stylesheet" href="styles.css?v=24" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#shop" aria-label="Homepage Sciadè">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/sciade-logo.jpg" alt="" />
+        </span>
+        <span>
+          <strong>Sciadè</strong>
+          <small>account</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Navigazione account">
+        <a href="index.html#shop">Shop</a>
+      </nav>
+      <div class="header-actions">
+        <button class="logout-button" type="button" data-logout>Esci</button>
+      </div>
+    </header>
+
+    <main class="account-page">
+      <section class="account-hero">
+        <p class="eyebrow">Area privata</p>
+        <h1>Il tuo account</h1>
+        <p>Controlla i dati del tuo profilo Sciadè e mantieni aggiornata la password.</p>
+      </section>
+
+      <section class="account-grid">
+        <form class="account-card account-form" data-profile-form>
+          <div>
+            <p class="eyebrow">Profilo</p>
+            <h2>Dati personali</h2>
+          </div>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" disabled />
+          </label>
+          <label>
+            Nome
+            <input name="firstName" type="text" autocomplete="given-name" required />
+          </label>
+          <label>
+            Cognome
+            <input name="lastName" type="text" autocomplete="family-name" required />
+          </label>
+          <label>
+            Data di nascita
+            <input name="birthdate" type="date" autocomplete="bday" required />
+          </label>
+          <button class="submit-order" type="submit">Salva dati</button>
+          <p class="form-message" data-profile-message role="status"></p>
+        </form>
+
+        <form class="account-card account-form" data-password-form>
+          <div>
+            <p class="eyebrow">Sicurezza</p>
+            <h2>Password</h2>
+          </div>
+          <label>
+            Password attuale
+            <input name="currentPassword" type="password" autocomplete="current-password" required />
+          </label>
+          <label>
+            Nuova password
+            <input name="newPassword" type="password" autocomplete="new-password" required minlength="8" />
+          </label>
+          <button class="submit-order" type="submit">Cambia password</button>
+          <p class="form-message" data-password-message role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="account.js?v=16"></script>
+  </body>
+</html>

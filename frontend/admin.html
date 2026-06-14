@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ordini | Sciadè</title>
+    <meta name="description" content="Database locale degli ordini Sciadè." />
+    <link rel="stylesheet" href="styles.css?v=24" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#shop" aria-label="Homepage Sciadè">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/sciade-logo.jpg" alt="" />
+        </span>
+        <span>
+          <strong>Sciadè</strong>
+          <small>gestione ordini</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <a href="index.html#shop">Shop</a>
+        <a href="admin.html">Ordini</a>
+      </nav>
+      <div class="admin-header-actions">
+        <button class="cart-button" type="button" data-refresh-orders>Aggiorna</button>
+        <button class="logout-button" type="button" data-logout>Esci</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="admin-page">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Database locale</p>
+            <h1>Ordini</h1>
+            <p>
+              Questi ordini sono salvati nel database SQLite locale su questo
+              computer.
+            </p>
+          </div>
+        </div>
+        <p class="checkout-note" data-empty-orders hidden>
+          Non ci sono ancora ordini. Fai un checkout di prova per vederne uno qui.
+        </p>
+        <div class="orders-list" data-orders></div>
+      </section>
+
+      <section class="admin-page admin-products" id="products">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Catalogo</p>
+            <h1>Prodotti</h1>
+            <p>Aggiungi nuovi pezzi, modifica i dettagli o rimuovi dal negozio i prodotti venduti.</p>
+          </div>
+        </div>
+
+        <form class="product-form" data-product-form>
+          <input name="id" type="hidden" />
+          <label>
+            Nome prodotto
+            <input name="name" required />
+          </label>
+          <label>
+            Categoria
+            <select name="category" required>
+              <option value="purses">Borse</option>
+              <option value="necklaces">Collane</option>
+              <option value="rings">Anelli</option>
+              <option value="bracelets">Bracciali</option>
+            </select>
+          </label>
+          <label>
+            Prezzo
+            <input name="price" type="number" min="0" step="1" required />
+          </label>
+          <label>
+            Immagine
+            <input name="imageFile" type="file" accept="image/png,image/jpeg,image/webp" />
+          </label>
+          <label>
+            Posizione ritaglio immagine
+            <input name="position" placeholder="center, center 70%, top..." />
+          </label>
+          <label class="field-wide">
+            Descrizione
+            <textarea name="description" rows="3" required></textarea>
+          </label>
+          <div class="product-form-actions">
+            <button class="submit-order" type="submit">Salva prodotto</button>
+            <button class="logout-button" type="button" data-product-reset>Nuovo prodotto</button>
+          </div>
+          <p class="form-message" data-product-message role="status"></p>
+        </form>
+
+        <div class="products-admin-grid" data-admin-products></div>
+      </section>
+    </main>
+
+    <script src="admin.js?v=16"></script>
+  </body>
+</html>

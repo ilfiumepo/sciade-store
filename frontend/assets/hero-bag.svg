@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-labelledby="title desc">
+  <title id="title">Handmade purse</title>
+  <desc id="desc">A stylized handmade blue purse with coral flap and gold clasp.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff7ed"/>
+      <stop offset="1" stop-color="#ead8c5"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" x2="1">
+      <stop offset="0" stop-color="#8bb8b5"/>
+      <stop offset="1" stop-color="#2d7472"/>
+    </linearGradient>
+    <pattern id="weave" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M0 14h28M14 0v28" stroke="#ffffff" stroke-opacity=".18" stroke-width="4"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="700" fill="url(#bg)"/>
+  <circle cx="726" cy="132" r="68" fill="#bc5965" opacity=".18"/>
+  <circle cx="171" cy="560" r="92" fill="#26716f" opacity=".16"/>
+  <path d="M330 254c14-93 82-145 175-145s159 54 172 145" fill="none" stroke="#593f35" stroke-width="30" stroke-linecap="round"/>
+  <path d="M209 262h582l-45 304c-8 55-48 86-104 86H357c-56 0-96-31-104-86l-44-304Z" fill="url(#body)"/>
+  <path d="M209 262h582l-45 304c-8 55-48 86-104 86H357c-56 0-96-31-104-86l-44-304Z" fill="url(#weave)"/>
+  <path d="M215 264c83 103 184 155 303 155 113 0 204-52 267-155H215Z" fill="#c85f6d"/>
+  <path d="M229 292h543" stroke="#f4d6ce" stroke-opacity=".46" stroke-width="8"/>
+  <rect x="452" y="350" width="95" height="76" rx="22" fill="#c5964e"/>
+  <circle cx="500" cy="388" r="15" fill="#fff4d7"/>
+  <path d="M294 575c101 35 316 34 415-2" fill="none" stroke="#1e5655" stroke-opacity=".42" stroke-width="18" stroke-linecap="round"/>
+</svg>

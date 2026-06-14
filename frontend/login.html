@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accesso | Sciadè</title>
+    <meta name="description" content="Accesso all'account Sciadè." />
+    <link rel="stylesheet" href="styles.css?v=24" />
+  </head>
+  <body>
+    <main class="login-shell">
+      <section class="login-card">
+        <a class="brand" href="index.html#shop" aria-label="Homepage Sciadè">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/sciade-logo.jpg" alt="" />
+          </span>
+          <span>
+            <strong>Sciadè</strong>
+            <small>account</small>
+          </span>
+        </a>
+        <div>
+          <p class="eyebrow">Account</p>
+          <h1>Accesso</h1>
+          <p>Accedi con email e password, oppure crea un account. Puoi comunque acquistare senza registrarti.</p>
+        </div>
+        <div class="auth-tabs" role="tablist" aria-label="Modalità account">
+          <button class="is-active" type="button" data-auth-mode="login">Accedi</button>
+          <button type="button" data-auth-mode="signup">Registrati</button>
+        </div>
+        <form class="login-form" data-login-form>
+          <input name="mode" type="hidden" value="login" />
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <div class="signup-fields is-hidden" data-signup-fields>
+            <label>
+              Nome
+              <input name="firstName" type="text" autocomplete="given-name" />
+            </label>
+            <label>
+              Cognome
+              <input name="lastName" type="text" autocomplete="family-name" />
+            </label>
+            <label>
+              Data di nascita
+              <input name="birthdate" type="date" autocomplete="bday" />
+            </label>
+          </div>
+          <label>
+            Password
+            <input name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <button class="submit-order" type="submit" data-auth-submit>Accedi</button>
+          <p class="form-message" data-login-message role="status"></p>
+        </form>
+        <a class="back-link" href="index.html#shop">Continua senza account</a>
+      </section>
+    </main>
+
+    <script src="login.js?v=16"></script>
+  </body>
+</html>
