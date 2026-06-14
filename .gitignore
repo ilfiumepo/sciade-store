@@ -7,10 +7,12 @@ data/*.sqlite3
 data/*.sqlite3-*
 data/backups/
 
+# Product images uploaded from the admin prototype are local runtime data.
+frontend/assets/uploads/
+
 # Local tunnel/downloaded tools.
 tools/
 
 # Local environment files.
 .env
 .env.*
-
